@@ -1,0 +1,23 @@
+body {
+    background-image: url("../img/food.png");
+    
+    
+}
+
+.burgers{
+    display:inline-block;
+    height:80px;
+    width:280px;
+    border-radius: 25px;
+}
+
+.burger-eaten{
+    
+
+    background-color:lightgrey;
+}
+
+.burger-not-eaten{
+    background-color:lightblue;
+    
+}
