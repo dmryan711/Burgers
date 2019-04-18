@@ -1,13 +1,13 @@
 var connection = require("./connection");
 
 var orm = {
-    selectAll: function(table){
+    selectAll: function(table,res){
         var queryString = "SELECT * FROM ??";
         connection.query(queryString,[table],function(err,result){
             if(err){
                 console.log(err.message);
             }
-            console.log(result);
+            res.json(result);
         });
 
     },
@@ -18,7 +18,7 @@ var orm = {
             if(err){
                 throw err;
             }
-            console.log(result);
+            console.log("Added the burger");
         });
     },
 

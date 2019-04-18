@@ -7,30 +7,19 @@ $("#submit-burger").on('click',function(event){
         var newBurger = {
             name:$("#burger-entry").val().trim()
         }
-        
-        $.post("/add",newBurger,function(data){
-            
+
+        $.post("/add",newBurger).then(function(){
+           $.get('/burgers',function(data){
+                console.log(data);
+             });
 
         });
 
         //Empty Burger Name
-        $("#burger-entry").val("");
-
-
-       
+        $("#burger-entry").val("");       
     }else{  //Value is Blank
 
     }
-
-    // //submit burger to db
-    // var test = {
-    //     name:"devon"
-    // }
-    // // $.get("/",function(data){});
-
-    // // //when thats done get all burgers
-
-
 });
 
 // Form validation

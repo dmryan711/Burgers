@@ -15,8 +15,9 @@ var burgerLoader = {
         orm.updateOne(BURGER_TABLE,BURGER_NAME_COL,newBurgerNameString,DEVOURED_COL,isDevoured,ID_COL,idOfBurgerToChange);
     },
 
-    showAllBurgers: function(){
-        orm.selectAll(BURGER_TABLE);
+    showAllBurgers: function(res){
+        var results = orm.selectAll(BURGER_TABLE,res);
+         
     },
 
     addABurger:function(nameofNewBurgerString,isDevoured){
