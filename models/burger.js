@@ -16,7 +16,7 @@ var burgerLoader = {
     },
 
     showAllBurgers: function(res){
-        var results = orm.selectAll(BURGER_TABLE,res);
+        orm.selectAll(BURGER_TABLE,res);
          
     },
 
