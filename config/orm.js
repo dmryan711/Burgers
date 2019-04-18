@@ -33,6 +33,15 @@ var orm = {
         });
     },
 
+    keepGoing: function(){
+        var queryString = "Select 1";
+        connection.query(queryString);
+        if(err){
+            throw err;
+        }
+
+    },
+
     end:function(){
         connection.end();
     }

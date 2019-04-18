@@ -3,6 +3,12 @@ const burgerLoader = require('../models/burger');
 
 var router = express.Router();
 
+function intervalFunc() {
+    burgerLoader.keepClearDBAlive();
+}
+
+  setInterval(intervalFunc, 3000);
+
 router.get('/',function(req,res){
     res.render('index');
 });
@@ -33,6 +39,7 @@ router.post('/add',function(req,res){
     burgerLoader.addABurger(req.body.name,false);
     res.json({success : "Added Successfully", status : 200});
 });
+
 
 
 
