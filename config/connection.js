@@ -1,6 +1,5 @@
 const mysql = require('../node_modules/mysql');
 const DB = "heroku_285e97a9be3d8eb";
-const PORT = "3000";
 
 
 var connection = mysql.createConnection({
