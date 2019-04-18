@@ -22,13 +22,14 @@ var orm = {
         });
     },
 
-    updateOne: function(table,col1,val1,col2,val2,whereCol,whereColVal){
+    updateOne: function(table,col1,val1,col2,val2,whereCol,whereColVal,res){
         var queryString = "UPDATE ?? SET ?? = ?, ?? = ? WHERE ?? = ?";
         connection.query(queryString,[table,col1,val1,col2,val2,whereCol,whereColVal],function(err,result){
             if(err){
                 throw err;
             }
             console.log(result);
+            res.json({success : "Updated Successfully", status : 200});
         });
     },
 
