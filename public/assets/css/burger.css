@@ -7,7 +7,7 @@ body {
 }
 
 .burgers{
-    display:inline-block;
+    display:block;
     height:80px;
     width:280px;
     border-radius: 25px;
