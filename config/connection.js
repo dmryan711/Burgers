@@ -2,13 +2,6 @@ const mysql = require('../node_modules/mysql');
 const DB = "burgers_db";
 const PORT = "3000";
 
-// var connection = mysql.createConnection({
-//     host: "localhost",
-//     port: PORT,
-//     user: "root",
-//     password:"",
-//     database:DB
-// });
 
 var connection = mysql.createConnection({
     host: "localhost",
