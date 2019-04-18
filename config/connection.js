@@ -1,5 +1,5 @@
 const mysql = require('../node_modules/mysql');
-const DB = "burgers_db";
+const DB = "heroku_285e97a9be3d8eb";
 const PORT = "3000";
 
 
@@ -11,10 +11,10 @@ var connection = mysql.createConnection({
     port: 3306,
   
     // Your username
-    user: "root",
+    user: "b6d59087604cdb",
   
     // Your password
-    password: "",
+    password: "7d75b4ac",
     database: DB
   });
 
