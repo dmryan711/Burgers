@@ -8,11 +8,11 @@ const ID_COL = "id";
 
 
 var burgerLoader = {
-    changeExistingBurgerByName: function(newBurgerNameString,isDevoured,nameOfBurgerToChange){
-        orm.updateOne(BURGER_TABLE,BURGER_NAME_COL,newBurgerNameString,DEVOURED_COL,isDevoured,BURGER_NAME_COL,nameOfBurgerToChange);
+    changeExistingBurgerByName: function(newBurgerNameString,isDevoured,nameOfBurgerToChange,res){
+        orm.updateOne(BURGER_TABLE,BURGER_NAME_COL,newBurgerNameString,DEVOURED_COL,isDevoured,BURGER_NAME_COL,nameOfBurgerToChange,res);
     },
-    changeExistingBurgerById: function(newBurgerNameString,isDevoured,idOfBurgerToChange){
-        orm.updateOne(BURGER_TABLE,BURGER_NAME_COL,newBurgerNameString,DEVOURED_COL,isDevoured,ID_COL,idOfBurgerToChange);
+    changeExistingBurgerById: function(newBurgerNameString,isDevoured,idOfBurgerToChange,res){
+        orm.updateOne(BURGER_TABLE,BURGER_NAME_COL,newBurgerNameString,DEVOURED_COL,isDevoured,ID_COL,idOfBurgerToChange,res);
     },
 
     showAllBurgers: function(res){

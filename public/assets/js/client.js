@@ -14,17 +14,30 @@ function getBurgersAndDisplay(){
 $("#burger-not-eaten-container").bind('click', function(event){
   var $burgerBox =  $("#"+event.target.id).parent();
   var burgerId = $burgerBox.attr("id");
+  var burgerText = $("#burger-paragraph-id-"+burgerId).text().replace(burgerId+ "." +" ","");
 
     var jsonArray = [
         {
             id:burgerId,
-            burger_name:$("#burger-paragraph-id-"+burgerId).text().replace(burgerId+ "." +" ",""),
+            burger_name:burgerText,
             devoured: true
         }
     ];
     $burgerBox.remove();
     displayBurgers(jsonArray);
+    updateBurger(burgerId,burgerText);
 });
+
+function updateBurger(burgerId,burgerDescription){
+    $.ajax({
+        url: "/update/:"+burgerId+"/:"+burgerDescription+"/:"+true,
+        type: 'PUT',
+        success: function(result) {
+            console.log("Done!");
+        }
+    });
+
+}
 
 
 $("#submit-burger").on('click',function(event){
