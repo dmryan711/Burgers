@@ -3,11 +3,11 @@ const DB = "heroku_285e97a9be3d8eb";
 
 
 var connection = mysql.createConnection({
-    host: "localhost",
+    host: "us-cdbr-iron-east-02.cleardb.net",
   
   
     // Your port; if not 3306
-    port: 3306,
+    // port: 3306,
   
     // Your username
     user: "b6d59087604cdb",
