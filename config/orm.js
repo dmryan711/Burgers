@@ -31,7 +31,7 @@ var orm = {
             console.log(result);
             res.json({success : "Updated Successfully", status : 200});
         });
-    }
+    },
 
     end:function(){
         connection.end();
