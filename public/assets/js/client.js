@@ -6,7 +6,7 @@ $(document).ready(function(){
 function getBurgersAndDisplay(){
     //remove children from both burger columns
     $("#burger-not-eaten-container").empty();
-    $("burger-eaten-container").empty();
+    $("#burger-eaten-container").empty();
 
     $.get('/burgers',function(data){
         console.log(data);
