@@ -3,11 +3,8 @@ const burgerLoader = require('../models/burger');
 
 var router = express.Router();
 
-function intervalFunc() {
-    burgerLoader.keepClearDBAlive();
-}
 
-  setInterval(intervalFunc, 3000);
+
 
 router.get('/',function(req,res){
     res.render('index');

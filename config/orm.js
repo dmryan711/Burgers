@@ -31,16 +31,7 @@ var orm = {
             console.log(result);
             res.json({success : "Updated Successfully", status : 200});
         });
-    },
-
-    keepGoing: function(){
-        var queryString = "Select 1";
-        connection.query(queryString);
-        if(err){
-            throw err;
-        }
-
-    },
+    }
 
     end:function(){
         connection.end();

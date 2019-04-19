@@ -26,10 +26,6 @@ var burgerLoader = {
 
     doneWithBurgers:function(){
         orm.end();
-    },
-
-    keepClearDBAlive:function(){
-        orm.keepGoing();
     }
 }
 
